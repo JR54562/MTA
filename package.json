@@ -1,0 +1,29 @@
+{
+  "name": "mta",
+  "version": "1.0.0",
+  "description": "music_tracker_app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JR54562/MTA.git"
+  },
+  "author": "Jay Reische",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JR54562/MTA/issues"
+  },
+  "homepage": "https://github.com/JR54562/MTA#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-es6-template-engine": "^2.2.3",
+    "pg": "^8.7.1",
+    "pg-promise": "^10.11.0",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
