@@ -1,4 +1,4 @@
 module.exports = {
     users: require('./users'),
-    // songs: require('./songs')
+    songs: require('./songs')
 }
