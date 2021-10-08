@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+    <h1>Welcome <%= user.username %>!</h1>
+    <h2>Edit your profile or peruse your collection.</h2>
+
+    <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
+        Username: <input type="text" name="username" value="<%=user.username%>" /> <br> <br>
+        Password: <input type="text" name="password" value="<%=user.password%>" /><br> <br> 
+        <br>
+        <input type="submit" class="editButton"value="Edit Profile" />
+        &nbsp;&nbsp;&nbsp;
+    <form action="/users/<%=user.id%>?_method=DELETE" method="POST">
+        <input type="submit"  class="delButton" value="Delete User" />
+    </form>
+</form>
+    <br><br>
+    <h3>You have collected the following Albums:</h3>
+    <br>
+
+</body>
+</html>
