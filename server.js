@@ -8,6 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("css"));
 const routes = require('./routes');
 app.use('/users', routes.users);
+app.use('/songs', routes.songs);
 app.use(express.static('public'));
 
 

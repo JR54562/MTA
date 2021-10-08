@@ -4,7 +4,7 @@ const User = require('../models').User;
 const index = (req, res) => {
     console.log(Song);
     Song.findAll().then((song) => {
-       res.render("songs/index.ejs", {
+       res.render("./songs/index.ejs", {
         song: song,
       });
     });
