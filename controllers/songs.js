@@ -3,7 +3,11 @@ const User = require("../models").User;
 
 const index = (req, res) => {
   console.log(Song);
-  Song.findAll()
+  Song.findAll({
+    include: [{// Notice `include` takes an ARRAY
+      model: User
+    }]
+  })
     .then((song) => {
       res.render("./songs/index.ejs", {
         song: song,
