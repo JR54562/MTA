@@ -11,6 +11,9 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      artist: {
+        type: Sequelize.STRING
+      },
       album: {
         type: Sequelize.STRING
       },
@@ -18,9 +21,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       length: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.STRING
       },
       genre: {
+        type: Sequelize.STRING
+      },
+      username: {
         type: Sequelize.STRING
       },
       createdAt: {
