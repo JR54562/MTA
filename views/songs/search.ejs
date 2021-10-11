@@ -9,12 +9,12 @@
         <h1>The Search page</h1>
 
         <div class="search-container">
-            Search by Name:
+            Search by Song Name:
             <form action="/songs/search" method="POST">
                 <input type="text" placeholder="Search.." name="search">
                 <button type="submit">Submit</button>
             </form><br><br>
-            Search by artist:
+            Search by Artist:
             <form action="/songs/search-by-artist" method="POST">
                 <input type="text" placeholder="Search.." name="search">
                 <button type="submit">Submit</button>
@@ -26,6 +26,16 @@
             </form><br><br>
             Search by Year:
             <form action="/songs/search-by-year" method="POST">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">Submit</button>
+            </form><br><br>
+            Search by Length:
+            <form action="/songs/search-by-length" method="POST">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">Submit</button>
+            </form><br><br>
+            Search by Genre:
+            <form action="/songs/search-by-genre" method="POST">
                 <input type="text" placeholder="Search.." name="search">
                 <button type="submit">Submit</button>
             </form><br><br>
