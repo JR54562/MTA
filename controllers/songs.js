@@ -142,7 +142,29 @@ const searchByAlbum = (req, res) => {
           });
     });
 };
-
+//This is used to search by Year
+const searchByYear = (req, res) => {
+    console.log(req.body)
+    Song.findAll({
+        where:
+        {
+            year: {
+            [Op.substring]: req.body.search
+                    }
+                },
+            include: [
+                {
+                    model: User,
+                    attributes: ["username", "id"],
+                },
+            ],        
+    }).then((foundSongs) => {
+        console.log("found Song", foundSongs[0].name);
+        res.render("songs/index.ejs", {
+            song: foundSongs,
+          });
+    });
+};
 
 // Show the Search Page
 const renderSearch = (req, res)=> {
@@ -159,5 +181,6 @@ module.exports = {
     search,
     renderSearch,
     searchByArtist,
-    searchByAlbum
+    searchByAlbum,
+    searchByYear
 };
