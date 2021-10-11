@@ -1,5 +1,6 @@
 const Song = require("../models").Song;
 const User = require("../models").User;
+const { Op } = require("sequelize");
 
 
 const index = (req, res) => {
@@ -73,16 +74,21 @@ const editSong = (req, res) => {
   });
 };
 //This is used to search
-const search = (req, res) => {
+const searchByName = (req, res) => {
     console.log(req.body)
     Song.findAll({
-        where: { name: req.body.search },
-      include: [
-        {
-          model: User,
-          attributes: ["username", "id"],
+        where: {
+            name: {
+                [Op.substring]: req.body.search
+            }
         },
-      ],
+            include: [
+                {
+                    model: User,
+                    attributes: ["username", "id"],
+                },
+            ],
+        
     }).then((foundSongs) => {
         console.log("found Song", foundSongs[0].name);
         res.render("songs/index.ejs", {
@@ -96,13 +102,17 @@ const search = (req, res) => {
 const searchByArtist = (req, res) => {
     console.log(req.body)
     Song.findAll({
-        where: { artist: req.body.search },
-      include: [
-        {
-          model: User,
-          attributes: ["username", "id"],
-        },
-      ],
+        where: {
+            artist: {
+                [Op.like]: req.body.search.toLowerCase()
+            },
+            include: [
+                {
+                    model: User,
+                    attributes: ["username", "id"],
+                },
+            ],
+        }
     }).then((foundSongs) => {
         console.log("found Song", foundSongs[0].name);
         res.render("songs/index.ejs", {
@@ -121,7 +131,7 @@ module.exports = {
   deleteSong,
   renderEdit,
     editSong,
-    search,
+    searchByName,
     renderSearch,
     searchByArtist
 };
