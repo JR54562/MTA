@@ -1,6 +1,27 @@
-<h1>New Pokemon page</h1>
-        <form action="/pokemon" method="POST">
-            Name: <input type="text" name="name" /><br/>
-            Image: <input type="text" name="img" /><br/>
-            <input type="submit" name="" value="Create Pokemon"/>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="/app.css">
+    </head>
+    <body>
+
+<h1>Enter your new song here</h1>
+        <form action="/songs" method="POST">
+            Name: <input type="text" name="name" /><br/><br/>
+            Artist: <input type="text" name="artist" /><br/><br/>
+            Album: <input type="text" name="album" /><br/><br/>
+            Year: <input type="text" name="year" /><br/><br/>
+            (format: x:xx)
+            Length: <input type="text" name="length" /><br/><br/>
+            Genre: <input type="text" name="genre" /><br/><br/>
+            <select name='userId'>
+<% users.forEach(user=>{%>
+ <option value='<%=user.id %>'><%=user.username%></option>   
+    <%}) %>
+            </select>
+            <input type="submit" name="" value="Add your song!"/>
         </form>
+</body>
+</html>

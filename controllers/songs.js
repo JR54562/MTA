@@ -3,8 +3,16 @@ const User = require("../models").User;
 
 const index = (req, res) => {
   console.log(Song);
-  Song.findAll()
-    .then((song) => {
+    Song.findAll({
+        include: [
+            {
+                model: User,
+                attributes: ["username", "id"],
+            },
+        ],
+    })
+      .then((song) => {
+        console.log(song)
       res.render("./songs/index.ejs", {
         song: song,
       });
@@ -13,7 +21,10 @@ const index = (req, res) => {
 
 // View to create a new Song
 const renderNew = (req, res) => {
-  res.render("songs/new.ejs");
+    User.findAll().then(users => {
+        res.render("songs/new.ejs", { users });
+    })
+  
 };
 const show = (req, res) => {
   // pass in song and id
