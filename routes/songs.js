@@ -12,5 +12,6 @@ router.delete('/:id', ctrl.songs.deleteSong)
 router.post('/search', ctrl.songs.search)
 router.get('/search', ctrl.songs.renderSearch)
 router.post('/search-by-artist', ctrl.songs.searchByArtist)
+router.post('/search-by-album', ctrl.songs.searchByAlbum)
 
 module.exports = router;
