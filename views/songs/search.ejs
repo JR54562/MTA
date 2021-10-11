@@ -9,9 +9,14 @@
         <h1>The Search page</h1>
 
         <div class="search-container">
-            Search by Title:
-            <form action="songs/show.ejs">
-                <input type="text" placeholder="Search.." name="search" value="<%=''%>">
+            Search by Name:
+            <form action="/songs/search" method="POST">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">Submit</button>
+            </form>
+            Search by artist:
+            <form action="/songs/search-by-artist" method="POST">
+                <input type="text" placeholder="Search.." name="search">
                 <button type="submit">Submit</button>
             </form>
         </div>

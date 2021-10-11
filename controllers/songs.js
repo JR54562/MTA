@@ -1,6 +1,7 @@
 const Song = require("../models").Song;
 const User = require("../models").User;
 
+
 const index = (req, res) => {
   console.log(Song);
     Song.findAll({
@@ -73,18 +74,45 @@ const editSong = (req, res) => {
 };
 //This is used to search
 const search = (req, res) => {
-    Song.findAll( {
+    console.log(req.body)
+    Song.findAll({
+        where: { name: req.body.search },
       include: [
         {
           model: User,
           attributes: ["username", "id"],
         },
       ],
-    }).then((foundSong) => {
-      console.log("found Song", foundSong.name);
-      res.render("songs/search.ejs", { song: foundSong });
+    }).then((foundSongs) => {
+        console.log("found Song", foundSongs[0].name);
+        res.render("songs/index.ejs", {
+            song: foundSongs,
+          });
+        // res.json(foundSongs)
+    //   res.render("songs/search.ejs", { song: foundSong });
     });
-  };
+};
+ //This is used to search
+const searchByArtist = (req, res) => {
+    console.log(req.body)
+    Song.findAll({
+        where: { artist: req.body.search },
+      include: [
+        {
+          model: User,
+          attributes: ["username", "id"],
+        },
+      ],
+    }).then((foundSongs) => {
+        console.log("found Song", foundSongs[0].name);
+        res.render("songs/index.ejs", {
+            song: foundSongs,
+          });
+    });
+}; 
+const renderSearch = (req, res)=> {
+    res.render("songs/search.ejs")
+}
 module.exports = {
   index,
   renderNew,
@@ -93,5 +121,7 @@ module.exports = {
   deleteSong,
   renderEdit,
     editSong,
-  search
+    search,
+    renderSearch,
+    searchByArtist
 };
