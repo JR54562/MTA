@@ -26,9 +26,9 @@ const renderNew = (req, res) => {
     })
   
 };
-//This is used to search
+//This is used to show
 const show = (req, res) => {
-  Song.findAll( {
+  Song.findByPk(req.params.index, {
     include: [
       {
         model: User,
@@ -71,7 +71,20 @@ const editSong = (req, res) => {
     res.redirect("/songs");
   });
 };
-
+//This is used to search
+const search = (req, res) => {
+    Song.findAll( {
+      include: [
+        {
+          model: User,
+          attributes: ["username", "id"],
+        },
+      ],
+    }).then((foundSong) => {
+      console.log("found Song", foundSong.name);
+      res.render("songs/search.ejs", { song: foundSong });
+    });
+  };
 module.exports = {
   index,
   renderNew,
@@ -79,5 +92,6 @@ module.exports = {
   postSong,
   deleteSong,
   renderEdit,
-  editSong,
+    editSong,
+  search
 };

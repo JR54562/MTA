@@ -9,5 +9,6 @@ router.post('/', ctrl.songs.postSong);
 router.get('/:id/edit', ctrl.songs.renderEdit);
 router.put('/:id', ctrl.songs.editSong)
 router.delete('/:id', ctrl.songs.deleteSong)
+router.get('/search', ctrl.songs.search)
 
 module.exports = router;
