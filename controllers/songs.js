@@ -74,52 +74,53 @@ const editSong = (req, res) => {
   });
 };
 //This is used to search
-const searchByName = (req, res) => {
+const search = (req, res) => {
     console.log(req.body)
     Song.findAll({
-        where: {
+        where:
+        {
             name: {
-                [Op.substring]: req.body.search
-            }
-        },
+            [Op.substring]: req.body.search
+                    }
+                },
             include: [
                 {
                     model: User,
                     attributes: ["username", "id"],
                 },
-            ],
-        
+            ],        
     }).then((foundSongs) => {
         console.log("found Song", foundSongs[0].name);
         res.render("songs/index.ejs", {
             song: foundSongs,
           });
-        // res.json(foundSongs)
-    //   res.render("songs/search.ejs", { song: foundSong });
     });
 };
- //This is used to search
+ //This is used to search by Artist
 const searchByArtist = (req, res) => {
     console.log(req.body)
     Song.findAll({
-        where: {
+        where:
+        {
             artist: {
-                [Op.like]: req.body.search.toLowerCase()
-            },
+            [Op.substring]: req.body.search
+                    }
+                },
             include: [
                 {
                     model: User,
                     attributes: ["username", "id"],
                 },
-            ],
-        }
+            ],        
     }).then((foundSongs) => {
         console.log("found Song", foundSongs[0].name);
         res.render("songs/index.ejs", {
             song: foundSongs,
           });
     });
-}; 
+};
+// This is used to search by
+
 const renderSearch = (req, res)=> {
     res.render("songs/search.ejs")
 }
@@ -131,7 +132,7 @@ module.exports = {
   deleteSong,
   renderEdit,
     editSong,
-    searchByName,
+    search,
     renderSearch,
     searchByArtist
 };
