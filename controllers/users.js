@@ -1,7 +1,7 @@
 const User = require('../models').User;
 
 const index = (req, res) => {
-    res.render('./users/index.ejs')
+    res.render('users/index.ejs')
 }
 
 const renderSignup = (req, res) => {
@@ -11,7 +11,7 @@ const renderSignup = (req, res) => {
 const signup = (req, res) => {
     User.create(req.body)
     .then(newUser => {
-        res.redirect(`/users/profile/${newUser.id}`);
+        res.redirect(`users/profile/${newUser.id}`);
     })
 }
 
@@ -27,7 +27,7 @@ const login = (req, res) => {
         }
     })
     .then(foundUser => {
-        res.redirect(`/users/profile/${foundUser.id}`);
+        res.redirect(`users/profile/${foundUser.id}`);
     })
 }
 
@@ -48,7 +48,7 @@ const editProfile = (req, res) => {
         returning: true
     })
     .then(updatedUser => {
-        res.redirect(`/users/profile/${req.params.index}`);
+        res.redirect(`users/profile/${req.params.index}`);
     })
 }
 

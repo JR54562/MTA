@@ -16,8 +16,8 @@ const renderNew = (req, res) => {
   res.render("songs/new.ejs");
 };
 const show = (req, res) => {
-  // pass in song and index
-  Song.findByPk(req.params.index, {
+  // pass in song and id
+  Song.findByPk(req.params.id, {
     include: [
       {
         model: User,
@@ -37,14 +37,14 @@ const postSong = (req, res) => {
 // One item will be deleted
 const deleteSong = (req, res) => {
   Song.destroy({
-    where: { id: req.params.index },
+    where: { id: req.params.id },
   }).then(() => {
     res.redirect("/songs");
   });
 };
 // From the index page, select one to edit
 const renderEdit = (req, res) => {
-  Song.findByPk(req.params.index).then((song) => {
+  Song.findByPk(req.params.id).then((song) => {
     res.render("./songs/edit.ejs", {
       song: song,
     });
@@ -53,7 +53,7 @@ const renderEdit = (req, res) => {
 // Allows for the editing of one item
 const editSong = (req, res) => {
   Song.update(req.body, {
-    where: { id: req.params.index },
+    where: { id: req.params.id },
     returning: true,
   }).then((song) => {
     res.redirect("/songs");
