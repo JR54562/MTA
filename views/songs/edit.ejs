@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="/app.css">
+    </head>
+    <body>
+        <h1>Edit Song Page</h1>
+        <form action="/songs/<%= song.id %>?_method=PUT" method="POST">
+		<!--  NOTE: the form is pre-populated with values for the server-->
+		    Name: <input type="text" name="name" value="<%=song.name%>"/><br/><br/>
+            Artist: <input type="text" name="artist" value="<%=song.artist%>" /><br/><br/>
+            Album: <input type="text" name="album" value="<%=song.album%>"/><br/><br/>
+            Year: <input type="text" name="year" value="<%=song.year%>"/><br/><br/>
+            (format: x:xx)<br>
+            Length: <input type="text" name="length" value="<%=song.length%>"/><br/><br/>
+            Genre: <input type="text" name="genre" value="<%=song.genre%>"/><br/><br/>
+            
+		<br/>
+		<input type="submit" name="" value="Submit Changes"/>
+        &nbsp;&nbsp;&nbsp;
+    <form action="/songs/<%=song.id%>/edit/?_method=DELETE" method="POST">
+        <input type="submit"  value="Delete Song" />
+    </form>
+        </form>
+    </body>
+</html>

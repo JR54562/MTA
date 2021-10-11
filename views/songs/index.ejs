@@ -14,12 +14,19 @@
           <span id="titleText">Song Title: <%= s.name %></span> <br/>
   Album: <%=s.album%>; Artist: <%=s.artist%>; Year: <%=s.year%>; Length: <%=s.length%>; Genre: <%=s.genre%><br>
   It was added by <%=s.User.username%> 
-  <br/>
+  <br/><br>
+  <a href="/songs/<%=s.id %>/edit">Edit Song</a>
+  &nbsp;&nbsp;&nbsp;
+    <form action="/songs/<%=s.id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Song" />
+    </form>
+  <br><br>
         </li>
         <% }) %>
       </ul>
     <nav>
       <a href="/songs/new">Create a New Song</a><br />
+      <a href="/songs/show">Search Songs</a><br />
       <a href="/users">Visit Your Profile</a>
     </nav>
   </body>

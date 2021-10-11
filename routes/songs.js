@@ -4,7 +4,7 @@ const ctrl = require('../controllers');
 
 router.get('/new', ctrl.songs.renderNew);
 router.get('/', ctrl.songs.index);
-router.get('/:id', ctrl.songs.show);
+router.get('/show', ctrl.songs.show);
 router.post('/', ctrl.songs.postSong);
 router.get('/:id/edit', ctrl.songs.renderEdit);
 router.put('/:id', ctrl.songs.editSong)

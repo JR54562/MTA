@@ -26,9 +26,9 @@ const renderNew = (req, res) => {
     })
   
 };
+//This is used to search
 const show = (req, res) => {
-  // pass in song and id
-  Song.findByPk(req.params.id, {
+  Song.findAll( {
     include: [
       {
         model: User,
@@ -36,10 +36,11 @@ const show = (req, res) => {
       },
     ],
   }).then((foundSong) => {
-    console.log("found Song", foundSong);
+    console.log("found Song", foundSong.name);
     res.render("songs/show.ejs", { song: foundSong });
   });
 };
+
 const postSong = (req, res) => {
   Song.create(req.body).then((newSong) => {
     res.redirect("/songs");
