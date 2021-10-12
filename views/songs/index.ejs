@@ -15,19 +15,21 @@
   Album: <%=s.album%>; Artist: <%=s.artist%>; Year: <%=s.year%>; Length: <%=s.length%>; Genre: <%=s.genre%><br>
   It was added by <%=s.User.username%> 
   <br/><br>
-  <a href="/songs/<%=s.id %>/edit">Edit Song</a>
-  &nbsp;&nbsp;&nbsp;
+  <a href="/songs/<%=s.id %>/edit" class="btn">Edit Song</a>
+  <br><br>
     <form action="/songs/<%=s.id%>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete Song" />
+        <input type="submit" class="btn" value="Delete Song" />
     </form>
   <br><br>
         </li>
         <% }) %>
       </ul>
-    <nav>
-      <a href="/songs/new">Create a New Song</a><br />
-      <a href="/songs/search">Search Songs</a><br />
-      <a href="/users">Visit Your Profile</a>
-    </nav>
+      <div class="box">
+    <div>
+      <a href="/songs/new" class="btn">Create a New Song</a><br />
+      <a href="/songs/search" class="btn">Search Songs</a><br />
+      <a href="/users" class="btn">Visit Your Profile</a>
+    </div>
+</div>
   </body>
 </html>

@@ -15,10 +15,10 @@
         Username: <input type="text" name="username" value="<%=user.username%>" /> <br> <br>
         Password: <input type="text" name="password" value="<%=user.password%>" /><br> <br> 
         <br>
-        <input type="submit" class="editButton"value="Edit Profile" />
+        <input type="submit" class="btn"value="Edit Profile" />
         &nbsp;&nbsp;&nbsp;
     <form action="/users/<%=user.id%>?_method=DELETE" method="POST">
-        <input type="submit"  class="delButton" value="Delete User" />
+        <input type="submit"  class="btn" value="Delete User" />
     </form>
 </form>
     <br><br>
