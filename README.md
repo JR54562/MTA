@@ -12,7 +12,6 @@ In order to use the app, a user will need to register the first time and only lo
 
 ![E4BDEBCA-66DB-40F7-98B9-7A2AFFF76CA1](https://user-images.githubusercontent.com/87659547/137034644-2b891a54-1265-4938-aff8-12a66c5cbd58.png)
 
-![E4BDEBCA-66DB-40F7-98B9-7A2AFFF76CA1](https://user-images.githubusercontent.com/87659547/137034644-2b891a54-1265-4938-aff8-12a66c5cbd58.png)
 
 
 ## Acknowledgments
