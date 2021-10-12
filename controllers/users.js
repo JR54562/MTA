@@ -38,7 +38,7 @@ const renderProfile = (req, res) => {
         include: [
           {
             model: Song,
-            attributes: ["id","name"],
+            attributes: ["id","name", "artist"],
           },
         ],
       })

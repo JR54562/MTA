@@ -6,6 +6,9 @@ MTA is an app that allows a user to first sign-up for a profile, and then add so
 
 No installation is required. A profile can be created on the main page initially.
 
+## Usage
+
+In order to use the 
 
 ## Acknowledgments
 

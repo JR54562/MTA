@@ -28,8 +28,8 @@
     <h3>You have collected the following Songs:</h3>
     <br>
     <% for (let i=0; i< user.Songs.length; i++){ %>
-        <li>
-           <%=user.Songs[i].name%>
+      <li>
+         <%=user.Songs[i].name%> by: <%=user.Songs[i].artist%>
            <div class="box">
             <div>
         <a href="/songs/<%=user.Songs[i].id %>/edit" class="btn">Edit Song</a>
