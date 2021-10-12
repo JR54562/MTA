@@ -5,3 +5,8 @@ MTA is an app that allows a user to first sign-up for a profile, and then add so
 ## Installation
 
 No installation is required. A profile can be created on the main page initially.
+
+
+## Acknowledgments
+
+Button code provided by - https://css3buttongenerator.com/

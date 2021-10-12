@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <title>Index</title>
-    <link rel="stylesheet" href="/css/app.css" />
-  </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+        </style>
+<link rel="stylesheet" href="/css/app.css" />  
+</head>
   <body>
     <h1>Songs Index Page</h1>
 
@@ -15,15 +18,20 @@
   Album: <%=s.album%>; Artist: <%=s.artist%>; Year: <%=s.year%>; Length: <%=s.length%>; Genre: <%=s.genre%><br>
   It was added by <%=s.User.username%> 
   <br/><br>
+  <div class="box">
+      <div>
   <a href="/songs/<%=s.id %>/edit" class="btn">Edit Song</a>
   <br><br>
     <form action="/songs/<%=s.id%>?_method=DELETE" method="POST">
         <input type="submit" class="btn" value="Delete Song" />
     </form>
+</div>
+    </div>
   <br><br>
         </li>
         <% }) %>
       </ul>
+
       <div class="box">
     <div>
       <a href="/songs/new" class="btn">Create a New Song</a><br />
