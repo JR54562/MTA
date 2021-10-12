@@ -11,7 +11,7 @@ const renderSignup = (req, res) => {
 const signup = (req, res) => {
     User.create(req.body)
     .then(newUser => {
-        res.redirect(`users/profile/${newUser.id}`);
+        res.redirect(`/users/profile/${newUser.id}`);
     })
 }
 
