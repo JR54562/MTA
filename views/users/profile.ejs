@@ -27,7 +27,21 @@
     <br><br>
     <h3>You have collected the following Songs:</h3>
     <br>
-   
+    <% for (let i=0; i< user.Songs.length; i++){ %>
+        <li>
+           <%=user.Songs[i].name%>
+           <div class="box">
+            <div>
+        <a href="/songs/<%=user.Songs[i].id %>/edit" class="btn">Edit Song</a>
+        <br><br>
+          <form action="/songs/<%=user.Songs[i].id%>?_method=DELETE" method="POST">
+              <input type="submit" class="btn" value="Delete Song" />
+          </form>
+      </div>
+          </div>
+        </li>
+        <br>
+    <% } %>
 <br>
 <div class="box">
     <div>

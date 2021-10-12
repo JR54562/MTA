@@ -1,4 +1,5 @@
 const User = require('../models').User;
+const Song = require('../models').Song;
 
 const index = (req, res) => {
     res.render('users/index.ejs')
@@ -26,13 +27,21 @@ const login = (req, res) => {
             password: req.body.password
         }
     })
-    .then(foundUser => {
+        .then(foundUser => {
+        console.log(foundUser)
         res.redirect(`/users/profile/${foundUser.id}`);
     })
 }
-
+//Show the User Profile page
 const renderProfile = (req, res) => {
-    User.findByPk(req.params.index)
+    User.findByPk(req.params.index, {
+        include: [
+          {
+            model: Song,
+            attributes: ["id","name"],
+          },
+        ],
+      })
     .then(userProfile => {
         res.render('users/profile.ejs', {
             user: userProfile
