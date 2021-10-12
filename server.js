@@ -20,7 +20,7 @@ app.use((req, res, next) => {
     next();
   });
   
-  app.listen(3003, () => {
+  app.listen(process.env.PORT || 3003, () => {
     console.log("Still listening...");
   });
   
