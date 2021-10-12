@@ -27,7 +27,7 @@ const login = (req, res) => {
         }
     })
     .then(foundUser => {
-        res.redirect(`users/profile/${foundUser.id}`);
+        res.redirect(`/users/profile/${foundUser.id}`);
     })
 }
 

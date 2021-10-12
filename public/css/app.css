@@ -1,6 +1,8 @@
 body{
     font-family: 'Quicksand', sans-serif;
-}
+    background-image: url("/images/blue_abstract_background.jpg") ;
+    background-size: cover;
+  }
 
 .btn {
     background: #3498db;
