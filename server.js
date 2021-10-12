@@ -12,7 +12,9 @@ app.use('/songs', routes.songs);
 app.use(express.static('public'));
 
 
-
+app.get('/', (req, res) => {
+  res.redirect('/users')
+})
 
 // Middleware goes above all other routes
 app.use((req, res, next) => {
