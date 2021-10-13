@@ -69,6 +69,7 @@ https://sequelize.org/master/manual/model-querying-basics.html
 - Assume there will be duplicate songs added. Display all?
 - Acknowledge any issues/errors and correct them. 
 - Massage data into or out of the database for case sensitivity.
+- Enforce data field entries before submit.
 - Adding a table for Album collection. As the user adds more songs from the same album name, they would be added to a discrete collection. 
 
 ## Acknowledgments
