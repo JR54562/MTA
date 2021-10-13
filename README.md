@@ -38,6 +38,7 @@ One database with two tables is used to track users and songs. There is a foreig
 - Apply a bootstrap design template to site. 
 - Acknowledge any issues/errors and correct them. 
 - Massage data into or out of the database for case sensitivity.
+- Adding a table for Album collection. As the user adds more songs from the same album name, they would be added to a discrete collection. 
 
 ## Acknowledgments
 
