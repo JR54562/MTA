@@ -29,7 +29,7 @@
     <br>
     <% for (let i=0; i< user.Songs.length; i++){ %>
       <li>
-         <%=user.Songs[i].name%> by: <%=user.Songs[i].artist%>
+        <span id="albumText"><%=user.Songs[i].name%> </span>&nbsp;&nbsp;by: <%=user.Songs[i].artist%>
            <div class="box">
             <div>
         <a href="/songs/<%=user.Songs[i].id %>/edit" class="btn">Edit Song</a>

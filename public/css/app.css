@@ -34,6 +34,30 @@ body{
 
   #titleText{
     font-size: 26px;
+    color: blue;
+}
+#boldText{
+  font-size: 18px;
+  color: #4e4cea;
+}
+#year{
+  color: red;
+  font-weight: bold;
+}
+#lenText{
+  color:rgb(13, 43, 69);
+  font-weight: bold;
+}
+#grnText{
+  color: green;
+}
+#albumText{
+  color: rgb(177, 5, 251);
+  font-size: 18px;
+  font-weight: bold;
+}
+#userText{
+  color: rgb(82, 55, 4);
 }
 .box div{
     display: flex;

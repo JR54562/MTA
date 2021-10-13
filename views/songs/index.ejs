@@ -17,8 +17,8 @@
         <% song.forEach ((s) => { %>
         <li>
           <span id="titleText">Song Title: <%= s.name %></span> <br/>
-  Album: <%=s.album%>; Artist: <%=s.artist%>; Year: <%=s.year%>; Length: <%=s.length%>; Genre: <%=s.genre%><br>
-  It was added by <%=s.User.username%> 
+          <span id="albumText">Album: <%=s.album%>;</span>&nbsp;&nbsp;&nbsp;<span id="boldText">Artist: <%=s.artist%>;</span>&nbsp;&nbsp;&nbsp;<span id="year"> Year: <%=s.year%>; </span>&nbsp;&nbsp;&nbsp; <span id="lenText">Length: <%=s.length%>; </span><span id="grnText">&nbsp;&nbsp;&nbsp;Genre: <%=s.genre%></span><br>
+  <span id="userText">It was added by <%=s.User.username%> </span>
   <br/><br>
         </li>
         <% }) %>
