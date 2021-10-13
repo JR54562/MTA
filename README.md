@@ -6,6 +6,21 @@ MTA is an app that allows a user to first sign-up for a profile, and then add so
 
 No installation is required. A profile can be created on the main page initially.
 
+## User Stories
+
+- As a User, I want to be able to create an account.
+- I want to be able to change my user name and password.
+- I want to add a song to the database. 
+- I want to edit and delete my songs.
+- I want to view all songs in the database. 
+- The ability to search by song name. 
+- The ability to search by album name.
+- The ability to search by artist name.
+- The ability to search by year.
+- The ability to search by length.
+- The ability to search by genre.
+
+
 ## Usage
 
 In order to use the app, a user will need to register the first time and then only login on subsequent visits.
@@ -51,6 +66,7 @@ https://sequelize.org/master/manual/model-querying-basics.html
 
 ```
 - Apply a bootstrap design template to site. 
+- Assume there will be duplicate songs added. Display all?
 - Acknowledge any issues/errors and correct them. 
 - Massage data into or out of the database for case sensitivity.
 - Adding a table for Album collection. As the user adds more songs from the same album name, they would be added to a discrete collection. 
