@@ -89,7 +89,8 @@ const search = (req, res) => {
                     attributes: ["username", "id"],
                 },
             ],        
-    }).then((foundSongs) => {
+    })
+      .then((foundSongs) => {
         console.log("found Song", foundSongs[0].name);
         res.render("songs/index.ejs", {
             song: foundSongs,
