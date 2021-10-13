@@ -35,6 +35,22 @@ One database with two tables is used to track users and songs. There is a foreig
 ## Future Enhancements
 
 - Some internal routing needs to be refactored into one action. This will clean up several lines of code. 
+```
+const { Op } = require("sequelize");
+Post.findAll({
+  where: {
+    [Op.or]: [
+      { authorId: 12 },
+      { authorId: 13 }
+    ]
+  }
+});
+// SELECT * FROM post WHERE authorId = 12 OR authorId = 13;
+
+https://sequelize.org/master/manual/model-querying-basics.html
+![image](https://user-images.githubusercontent.com/87659547/137146406-dddee591-321b-44e9-9340-858872c4c975.png)
+
+```
 - Apply a bootstrap design template to site. 
 - Acknowledge any issues/errors and correct them. 
 - Massage data into or out of the database for case sensitivity.
