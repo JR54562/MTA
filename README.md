@@ -6,7 +6,7 @@ MTA is an app that allows a user to first sign-up for a profile, and then add so
 
 No installation is required. A profile can be created on the main page initially.
 
-Link to app: https://mt-app-jr.herokuapp.com/
+Link to app: https://mt-app-jr.herokuapp.com/<br>
 Link to repo: https://github.com/JR54562/MTA
 
 ## User Stories
