@@ -26,6 +26,12 @@ Fill in all of the fields and click Add your song! Be sure to select your userna
 
 ![45FDB3E2-424A-4900-8DE7-73FA1A391092](https://user-images.githubusercontent.com/87659547/137044311-6e97ad97-b62c-4879-94e5-2f5e749c9169.png)
 
+## Project Structure
+
+One database with two tables is used to track users and songs. There is a foreign relationship to enable song tracking by user. 
+
+![image](https://user-images.githubusercontent.com/87659547/137054012-4a76ade6-d105-4bca-82c1-3be143450005.png)
+
 
 ## Acknowledgments
 
