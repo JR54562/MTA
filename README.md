@@ -48,7 +48,6 @@ Post.findAll({
 // SELECT * FROM post WHERE authorId = 12 OR authorId = 13;
 
 https://sequelize.org/master/manual/model-querying-basics.html
-![image](https://user-images.githubusercontent.com/87659547/137146406-dddee591-321b-44e9-9340-858872c4c975.png)
 
 ```
 - Apply a bootstrap design template to site. 
