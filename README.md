@@ -20,6 +20,11 @@ Once logged in, a user can edit the username and password of their profile, add 
 
 At this time, searching is limited to case-specific spelling. However, partial searches are supported. 
 
+### Adding a New Song
+
+Fill in all of the fields and click Add your song! Be sure to select your username to add it to your collection. 
+
+![45FDB3E2-424A-4900-8DE7-73FA1A391092](https://user-images.githubusercontent.com/87659547/137044311-6e97ad97-b62c-4879-94e5-2f5e749c9169.png)
 
 
 ## Acknowledgments
